@@ -1,0 +1,158 @@
+{
+ "actions": [
+  {
+   "action": "creditnotes.credit_note.print_credit_notes",
+   "action_type": "Server Action",
+   "group": "Print Credit Notes",
+   "label": "Print Credit Notes"
+  },
+  {
+   "action": "creditnotes.credit_note.print_credit_notes_fc",
+   "action_type": "Server Action",
+   "group": "Print Credit Notes",
+   "label": "Print Credit Notes FC"
+  }
+ ],
+ "allow_rename": 1,
+ "creation": "2025-03-10 04:23:06.823125",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "document_ref",
+  "insurance_ref",
+  "cover_start_date",
+  "expiry_date",
+  "resolved_name",
+  "product",
+  "document_id",
+  "document_date",
+  "created_by",
+  "reinsurers",
+  "status",
+  "parent_dates",
+  "foreign_currency_code",
+  "exchange_rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "document_ref",
+   "fieldtype": "Data",
+   "label": "Document Ref"
+  },
+  {
+   "fieldname": "insurance_ref",
+   "fieldtype": "Data",
+   "label": "Insurance Ref"
+  },
+  {
+   "fieldname": "cover_start_date",
+   "fieldtype": "Date",
+   "label": "Cover Start Date"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Cover End Date"
+  },
+  {
+   "fieldname": "resolved_name",
+   "fieldtype": "Long Text",
+   "label": "Resolved Name"
+  },
+  {
+   "fieldname": "product",
+   "fieldtype": "Data",
+   "label": "Product"
+  },
+  {
+   "fieldname": "document_id",
+   "fieldtype": "Int",
+   "label": "Document ID"
+  },
+  {
+   "fieldname": "document_date",
+   "fieldtype": "Datetime",
+   "label": "Document Date"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Document Created By"
+  },
+  {
+   "fieldname": "reinsurers",
+   "fieldtype": "Table",
+   "label": "Reinsurers",
+   "options": "FacTransaction_Reinsurer"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Read Only",
+   "label": "Status"
+  },
+  {
+   "fieldname": "parent_dates",
+   "fieldtype": "Read Only",
+   "label": "Parent"
+  },
+  {
+   "fieldname": "foreign_currency_code",
+   "fieldtype": "Data",
+   "label": "Foreign Currency Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "exchange_rate",
+   "fieldtype": "Float",
+   "label": "Exchange Rate",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-05 16:33:40.202173",
+ "modified_by": "Administrator",
+ "module": "Credit Notes",
+ "name": "FacTransaction",
+ "naming_rule": "By script",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "CreditNoteRPA",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Saved"
+  },
+  {
+   "color": "Green",
+   "title": "Printed"
+  }
+ ],
+ "track_changes": 1
+}

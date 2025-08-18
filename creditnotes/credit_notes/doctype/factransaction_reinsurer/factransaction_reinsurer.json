@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-10 04:48:31.208426",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "resolved_name",
+  "shortname",
+  "vatrate",
+  "this_share_percent",
+  "sum_insured",
+  "total_sum_insured",
+  "premium_percent",
+  "premium_value",
+  "premium_tax",
+  "commission_percent",
+  "commission_value",
+  "commission_tax",
+  "riskdescription",
+  "total_premium",
+  "total_commission",
+  "net_due",
+  "address",
+  "emails",
+  "is_commission_modified",
+  "party_cnt",
+  "ri_arrangement_line_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "resolved_name",
+   "fieldtype": "Long Text",
+   "label": "Resolved Name"
+  },
+  {
+   "fieldname": "shortname",
+   "fieldtype": "Small Text",
+   "label": "Short Name"
+  },
+  {
+   "fieldname": "vatrate",
+   "fieldtype": "Data",
+   "label": "Vat Rate"
+  },
+  {
+   "fieldname": "this_share_percent",
+   "fieldtype": "Float",
+   "label": "Share %"
+  },
+  {
+   "fieldname": "sum_insured",
+   "fieldtype": "Float",
+   "label": "Sum Insured"
+  },
+  {
+   "fieldname": "total_sum_insured",
+   "fieldtype": "Currency",
+   "is_virtual": 1,
+   "label": "Total Sum Insured"
+  },
+  {
+   "fieldname": "premium_percent",
+   "fieldtype": "Float",
+   "label": "Premium %"
+  },
+  {
+   "fieldname": "premium_value",
+   "fieldtype": "Float",
+   "label": "Premium Value"
+  },
+  {
+   "fieldname": "premium_tax",
+   "fieldtype": "Float",
+   "label": "Premium Tax"
+  },
+  {
+   "fieldname": "commission_percent",
+   "fieldtype": "Float",
+   "label": "Commission %"
+  },
+  {
+   "fieldname": "commission_value",
+   "fieldtype": "Float",
+   "label": "Commission Value"
+  },
+  {
+   "fieldname": "commission_tax",
+   "fieldtype": "Float",
+   "label": "Commission Tax"
+  },
+  {
+   "fieldname": "riskdescription",
+   "fieldtype": "Data",
+   "label": "Risk Description"
+  },
+  {
+   "fieldname": "total_premium",
+   "fieldtype": "Float",
+   "is_virtual": 1,
+   "label": "Total Premium"
+  },
+  {
+   "fieldname": "total_commission",
+   "fieldtype": "Float",
+   "is_virtual": 1,
+   "label": "Total Commission"
+  },
+  {
+   "fieldname": "net_due",
+   "fieldtype": "Float",
+   "is_virtual": 1,
+   "label": "Net Due to You"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Long Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "emails",
+   "fieldtype": "Long Text",
+   "label": "Emails"
+  },
+  {
+   "fieldname": "is_commission_modified",
+   "fieldtype": "Int",
+   "label": "Is Commission Modified"
+  },
+  {
+   "fieldname": "party_cnt",
+   "fieldtype": "Int",
+   "label": "Party Count"
+  },
+  {
+   "fieldname": "ri_arrangement_line_id",
+   "fieldtype": "Int",
+   "label": "RI Arrangement Line ID"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-05 12:01:15.291166",
+ "modified_by": "Administrator",
+ "module": "Credit Notes",
+ "name": "FacTransaction_Reinsurer",
+ "naming_rule": "By script",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
