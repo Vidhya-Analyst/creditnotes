@@ -1,0 +1,44 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"eqlPSdYEOu\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">CreditNote RPA</span>\",\"col\":12}},{\"id\":\"TT95njOIBV\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"CreditNoteRPA List\",\"col\":6}},{\"id\":\"abZ9yiu1W_\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"FacTransaction List\",\"col\":6}}]",
+ "creation": "2025-03-26 08:54:14.503031",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "income",
+ "idx": 1,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Credit Notes",
+ "links": [],
+ "modified": "2025-08-19 10:25:03.654447",
+ "modified_by": "Administrator",
+ "module": "Credit Notes",
+ "name": "Credit Notes",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "CreditNoteRPA",
+   "label": "CreditNoteRPA List",
+   "quick_list_filter": "[]"
+  },
+  {
+   "document_type": "FacTransaction",
+   "label": "FacTransaction List",
+   "quick_list_filter": "[]"
+  }
+ ],
+ "roles": [
+  {
+   "role": "CreditNoteRPA"
+  }
+ ],
+ "sequence_id": 18.0,
+ "shortcuts": [],
+ "title": "Credit Notes"
+}
