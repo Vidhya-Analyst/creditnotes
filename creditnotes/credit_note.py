@@ -105,11 +105,13 @@ def extract_reins_details(doc):
 @frappe.whitelist()
 def print_credit_notes(doc):
     doc = json.loads(extract_reins_details(doc))
-
+    
     #Check if Reinsurers are present
     if not doc['reinsurers']:
         frappe.throw("No Reinsurers found for this FacTransaction, therefore cannot print any Credit Notes.")
         return
+
+    frappe.msgprint(str(doc['reinsurers']))
 
     #Check if the FacTransaction is already printed and delete the existing files
     if doc['status'] == 'Printed':
@@ -146,7 +148,7 @@ def print_credit_notes(doc):
         pdf_writer.write(pdf_page_stream)
 
         short_name = doc['reinsurers'][i]['shortname'].strip()
-        file_name = f"{short_name}-{i}-{doc['name']}-CN.pdf"
+        file_name = f"{short_name}-{i+1}-{doc['name']}-CN.pdf"
 
         file_doc = frappe.get_doc({
                 "doctype": "File",
@@ -158,7 +160,7 @@ def print_credit_notes(doc):
             })
         file_doc.save(ignore_permissions=True)
 
-    frappe.msgprint(f"Credit Note PDF generated and attached.")
+    frappe.msgprint(f"{len(doc['reinsurers'])} Credit Notes generated and attached.")
     frappe.db.set_value('FacTransaction', doc['name'], 'status', 'Printed')
     
 @frappe.whitelist()
